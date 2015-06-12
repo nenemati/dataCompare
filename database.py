@@ -23,7 +23,17 @@ class myDb(object):
         return self.database
 
     def connect(self):
+        db = MySQLdb.connect(host=self.hostname, # your host, usually localhost
+            user=self.username, # your username
+            passwd=self.password, # your password
+            db=self.database) # name of the data base
+
+        return db
+
+    def showTables(self):
         
+
+
 
 
 
