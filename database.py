@@ -31,9 +31,11 @@ class myDb(object):
         cur = db.cursor()
         return cur
 
-    def showTables(self):
+    #pass table name here
+    def showTables(self, table):
         cur = self.connect()
         cur.execute("SHOW TABLES")
+
 
 
 
