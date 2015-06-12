@@ -33,7 +33,9 @@ class myDb(object):
 
     def showTables(self):
         cur = self.connect()
-        cur.execute("put query in here")
+        cur.execute("SHOW TABLES")
+
+
 
 
 
