@@ -1,7 +1,7 @@
 import csv
 
 
-f = open('name.csv', 'rb')
+f = open('LoanStats3d.csv', 'rb')
 reader = csv.reader(f)
 
 for row in reader:
