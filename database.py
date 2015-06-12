@@ -23,15 +23,25 @@ class myDb(object):
         return self.database
 
     def connect(self):
-        db = MySQLdb.connect(host=self.hostname, # your host, usually localhost
-            user=self.username, # your username
-            passwd=self.password, # your password
-            db=self.database) # name of the data base
+        db = MySQLdb.connect(host=self.hostname,
+            user=self.username,
+            passwd=self.password,
+            db=self.database)
 
-        return db
+        cur = db.cursor()
+        return cur
 
     def showTables(self):
-        
+        cur = self.connect()
+        cur.execute("put query in here")
+
+
+
+
+
+
+
+
 
 
 
