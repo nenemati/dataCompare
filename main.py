@@ -22,6 +22,13 @@ def addElementsInList(list):
     for row in list:
         newlist = sum(list)
 
+
+def slope():
+    import math
+    value = ((sumofListX*sumofListY) - (n*sumofListXtimeY))/((math.pow(sumofListX,2)) - (n*math.pow(sumofListX,2)))
+    return value
+
+
 list1 = [-1,1,2,4,6,7]
 list2 = [-1,2,3,3,5,8]
 listXSquared = square(list1)
@@ -33,6 +40,8 @@ sumofListXSquared = addElementsInList(listXSquared)
 sumofListYSquared = addElementsInList(listYSquared)
 sumofListXtimeY = addElementsInList(listXtimeY)
 n = len(list1)
+print slope()
+
 
 
 
