@@ -28,11 +28,17 @@ def findSlope(listX, listY):
     import math
     sigmaX = addElementsInList(listX)
     sigmaY = addElementsInList(listY)
+    sigmaXY = multiplyList(listX,listY)
     n = len(list1) # might want to make a f(x) call here
     sigmaXthenSquared = math.pow(sum(listX),2)
     sigmaXSquared = sum(square(listX))
-    # slope = ((sigmaX*sigmaY) - (n*sigmaXY))/((sigmaXSquared) - (n*sigmaXSquared))
-    # return slope
+    numeratorFirst = sigmaX*sigmaY
+    numeratorSecond = n*sigmaXY
+    numerator = numeratorFirst - numeratorSecond
+    print(numerator)
+
+
+
 
 
 
