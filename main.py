@@ -23,8 +23,16 @@ def addElementsInList(list):
         newlist = sum(list)
 
 
-def slope():
+def findSlope(listX, listY):
     import math
+    sigmaX = addElementsInList(listX)
+    sigmaY = addElementsInList(listY)
+    n = len(list1) # might want to make a f(x) call here
+    sigmaXY = addElementsInList(multiplyList(listX,listY))
+    sigmaXSquared = math.pow(sigmaX,2)
+    
+
+
     value = ((sumofListX*sumofListY) - (n*sumofListXtimeY))/((math.pow(sumofListX,2)) - (n*math.pow(sumofListX,2)))
     return value
 
