@@ -37,7 +37,13 @@ def findSlope(listX, listY):
     dummy = n*sigmaXY
     denominator = (sigmaXThenSquared - dummy)
     slope = numerator/denominator
-    print slope
+    return slope
+
+def findyIntercept(listX, listY):
+    import math
+    sigmaX = addElementsInList(listX)
+    sigmaY = addElementsInList(listY)
+    sigmaXY = sum((multiplyList(listX,listY)))
 
 
 
