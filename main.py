@@ -50,13 +50,30 @@ def bHat(listX, listY):
     sigmaXThenSquared = math.pow(sigmaX,2)
     dummy = n*sigmaXSquared
     denominator =  (sigmaXThenSquared) - dummy
-    bHat = numerator/denominator
-    return bHat
+    yIntercept = numerator/denominator
+    return yIntercept
+
+def standardDeviationX(listX):
+    import math
+    sigmaXSquared = sum(square(listX))
+    n=len(listX)
+    sigmaX = addElementsInList(listX)
+    sigmaXThenSquared = math.pow(sigmaX,2)
+    numerator = (sigmaXSquared) - (1/n * sigmaXThenSquared)
+    final = numerator/(n-1)
+    print(final)
+
+
+
+
+
 
 list1 = [-1,1,2,4,6,7]
 list2 = [-1,2,3,3,5,8]
 
-print bHat(list1,list2)
+standardDeviationX(list1)
+
+# print bHat(list1,list2)
 
 # listXSquared = square(list1)
 # listYSquared = square(list2)
