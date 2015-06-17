@@ -33,9 +33,11 @@ def findSlope(listX, listY):
     sigmaXThenSquared = math.pow(sigmaX,2)
     sigmaXSquared = sum(square(listX))
     numerator = (sigmaX*sigmaY) -  (n*sigmaXY)
-    denominator =
+    # print(numerator)
+    dummy = n*sigmaXY
+    denominator = (sigmaXThenSquared - dummy)
     slope = numerator/denominator
-    return slope
+    print slope
 
 
 
