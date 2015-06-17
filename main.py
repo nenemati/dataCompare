@@ -24,7 +24,7 @@ def addElementsInList(list):
     return newlist
 
 
-def findSlope(listX, listY):
+def Ahat(listX, listY):
     import math
     sigmaX = addElementsInList(listX)
     sigmaY = addElementsInList(listY)
@@ -39,19 +39,24 @@ def findSlope(listX, listY):
     slope = numerator/denominator
     return slope
 
-def findyIntercept(listX, listY):
+def bHat(listX, listY):
     import math
     sigmaX = addElementsInList(listX)
     sigmaY = addElementsInList(listY)
     sigmaXY = sum((multiplyList(listX,listY)))
-
-
-
+    sigmaXSquared = sum(square(listX))
+    n=len(listX)
+    numerator = (sigmaX*sigmaXY) - (sigmaY*sigmaXSquared)
+    sigmaXThenSquared = math.pow(sigmaX,2)
+    dummy = n*sigmaXSquared
+    denominator =  (sigmaXThenSquared) - dummy
+    bHat = numerator/denominator
+    return bHat
 
 list1 = [-1,1,2,4,6,7]
 list2 = [-1,2,3,3,5,8]
 
-print findSlope(list1,list2)
+print bHat(list1,list2)
 
 # listXSquared = square(list1)
 # listYSquared = square(list2)
